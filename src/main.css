@@ -1,0 +1,72 @@
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-right: 8px;
+    margin-left: 8px;
+    background-color: grey;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+.cellName {
+    width: 130px;
+    height: 100px;
+}
+
+.cellText {
+    text-align: center;
+    text-anchor: middle;
+}
+
+.listElement {
+    list-style: none;
+}
+
+.ulStyle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.attemptLabels {
+    margin-bottom: 5px;
+}
+
+.attemptLabelElement {
+    border-radius: 5px;
+    height: 60px;
+    background-color: rgb(46, 46, 46);
+}
+
+.labelText {
+    color: white;
+}
+
+.comboBox {
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    background-color: grey;
+    border-radius: 5px;
+    color: black;
+}
+
+.MuiAutocomplete-option {
+    background-color: grey;
+    color: black;
+}
+
+.MuiAutocomplete-listbox {
+    background-color: rgb(100, 100, 100);
+}
