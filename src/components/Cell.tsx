@@ -4,7 +4,7 @@ import Abno from "../Abno";
 // 0: Name
 // 1: Risk Level
 // 2: Qliphoth Counter: -1 = X
-// 3: Max Enkephalin
+// 3: Max Enkephalin: -1 = X
 // 4: Capable of Breach
 // 5: Image path to abnormality portrait
 function Cell(abno: Abno, index: number) {
@@ -23,7 +23,7 @@ function Cell(abno: Abno, index: number) {
     if (index === 1) return abno.name;
     if (index === 2) return abno.riskLevel;
     if (index === 3) return (abno.qliphothCounter == -1) ? "X" : abno.qliphothCounter;
-    if (index === 4) return abno.maxEnkephalin;
+    if (index === 4) return (abno.maxEnkephalin == -1) ? "X" : abno.maxEnkephalin;
     if (index === 5) return abno.canBreach ? "Yes" : "No";
     return "Error";
   }
