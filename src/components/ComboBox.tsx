@@ -39,7 +39,7 @@ export default function ComboBox({ handleGuess = (_: number) => { } }) {
 
   return (
     <Autocomplete
-      className="comboBox"
+      //className="comboBox"
       id="search-box"
       options={abnos}
       blurOnSelect
@@ -49,9 +49,6 @@ export default function ComboBox({ handleGuess = (_: number) => { } }) {
       disableClearable
       size="small"
       disabled={disabled}
-      sx={{
-        width: 400
-      }}
       onChange={(_event, value, _reason) => {
         handleChange(value);
       }}
