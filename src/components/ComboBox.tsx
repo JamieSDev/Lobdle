@@ -39,7 +39,6 @@ export default function ComboBox({ handleGuess = (_: number) => { } }) {
 
   return (
     <Autocomplete
-      //className="comboBox"
       id="search-box"
       options={abnos}
       blurOnSelect
