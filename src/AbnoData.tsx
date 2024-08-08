@@ -46,7 +46,7 @@ const abnoList: [string, string, number, number, boolean, string][] = [
   ["The Little Prince", "Waw", 2, 24, false, "abnoimages/LittlePrince.webp"],
   ["Laetitia", "He", -1, 16, false, "abnoimages/Laetitia.webp"],
   ["Funeral of the Dead Butterflies", "He", 2, 16, true, "abnoimages/DeadButterflies.webp"],
-  ["Der Freischütz", "He", 3, 18, false, "abnoimages/Der.webp"],
+  ["Der Freischutz", "He", 3, 18, false, "abnoimages/Der.webp"],
   ["Dream of a Black Swan", "Waw", 5, 24, true, "abnoimages/BlackSwan.webp"],
   ["The Dreaming Current", "Waw", 2, 20, true, "abnoimages/DreamingCurrent.webp"],
   ["The Burrowing Heaven", "Waw", 3, 24, true, "abnoimages/BurrowingHeaven.webp"],
@@ -79,7 +79,7 @@ const abnoNameList = ["Standard Training-Dummy Rabbit", "Scorched Girl", "One Si
   "The Lady Facing the Wall", "Nothing There", "1.76 MHz", "Singing Machine", "The Silent Orchestra", "Warm-Hearted Woodsman", "The Snow Queen", "Big Bird", "All-Around Helper",
   "Snow White's Apple", "Spider Bud", "Beauty and the Beast", "Plague Doctor", "WhiteNight", "Don't Touch Me", "Rudolta of the Sleigh", "Queen Bee", "Bloodbath", "Opened Can of WellCheers",
   "Alriune", "Forsaken Murderer", "Child of the Galaxy", "Punishing Bird", "Little Red Riding Hooded Mercenary", "Big and Will be Bad Wolf", "Fragment of the Universe",
-  "Crumbling Armor", "Judgement Bird", "Apocalypse Bird", "The King of Greed", "The Little Prince", "Laetitia", "Funeral of the Dead Butterflies", "Der Freischütz", "Dream of a Black Swan",
+  "Crumbling Armor", "Judgement Bird", "Apocalypse Bird", "The King of Greed", "The Little Prince", "Laetitia", "Funeral of the Dead Butterflies", "Der Freischutz", "Dream of a Black Swan",
   "The Dreaming Current", "The Burrowing Heaven", "The Knight of Despair", "The Naked Nest", "The Mountain of Smiling Bodies", "Schadenfreude", "Fairy Festival", "Meat Lantern", "Scarecrow Searching for Wisdom",
   "Dimensional Refraction Variant", "CENSORED", "Today's Shy Look", "Blue Star", "Porccubus", "Void Dream", "Grave of Cherry Blossoms", "The Firebird", "Yin",
   "Il Pianto della Luna", "Army in Black", "Ppodae", "Parasite Tree", "Melting Love", "Clouded Monk", "You're Bald"];
