@@ -3,19 +3,8 @@
     src: url("norwester.otf");
 }
 
-input[type=text] {
-    color: #ffffa2;
-    font-family: "Norwester";
-}
 
-.logo {
-    display: flex;
-    margin: auto;
-    margin-top: 30px;
-    padding-right: 17px;
-    height: 150px;
-}
-
+/* Cells */
 .cell {
     display: flex;
     align-items: center;
@@ -29,6 +18,11 @@ input[type=text] {
     outline: outset #5c5c51;
 }
 
+.cellName {
+    width: 130px;
+    height: 100px;
+}
+
 .correct {
     background-color: #65eb36;
     outline-color: #47a325;
@@ -39,9 +33,11 @@ input[type=text] {
     outline-color: #9e2323;
 }
 
-.cellName {
-    width: 130px;
-    height: 100px;
+
+/* Text */
+input[type=text] {
+    color: #ffffa2;
+    font-family: "Norwester";
 }
 
 .cellText {
@@ -56,15 +52,27 @@ input[type=text] {
     font-family: "Norwester";
 }
 
-.listElement {
-    list-style: none;
+
+/* Images */
+.logo {
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    padding-right: 17px;
+    height: 150px;
 }
 
+
+/* Lists */
 .ulStyle {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     padding: 0px;
+}
+
+.listElement {
+    list-style: none;
 }
 
 .attemptLabels {
@@ -77,8 +85,8 @@ input[type=text] {
     background-color: #2c2c24;
 }
 
-/* Mui components: */
 
+/* Mui components */
 .MuiAutocomplete-root {
     margin: auto;
     margin-top: 15px;
