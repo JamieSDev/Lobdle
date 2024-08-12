@@ -2,7 +2,7 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { abnoNameList } from "../AbnoData";
-import { gameState, resetGameState } from "../App";
+import { gameState } from "../App";
 
 export default function ComboBox({ handleGuess = (_: number) => { } }) {
   const [inputValue, setInputValue] = React.useState("");
@@ -13,13 +13,10 @@ export default function ComboBox({ handleGuess = (_: number) => { } }) {
     switch (gameState) {
       case 0: setDisabled(false);
         break;
-      case 3: setDisabled(true);
-        break;
       case 1:
       case 2:
         setDisabled(true);
         setAbnos(abnoNameList);
-        resetGameState();
     }
   }, [gameState]);
 
