@@ -2,20 +2,17 @@ import ComboBox from "./components/ComboBox";
 import { useState } from "react";
 import Abno from "./Abno";
 import Cell from "./components/Cell";
+import EndScreen from "./components/EndScreen";
 
 let answer: Abno;
 let attemptList: Abno[] = [];
 let cellMaker: number[] = [0, 1, 2, 3, 4, 5];
-let gameState: number = 0; //0: ongoing, 1: lost, 2: won 3: over
+let gameState: number = 0; //0: ongoing, 1: lost, 2: won
 
 
 function addAttempt(index: number) {
   attemptList.unshift(new Abno(index));
 };
-
-function resetGameState() {
-  gameState = 0;
-}
 
 function App() {
   const [guesses, setGuesses] = useState(0);
@@ -31,35 +28,25 @@ function App() {
     setGuesses(guesses + 1);
   };
 
+  const restart = () => {
+    setGuesses(0);
+    setInitialization(0);
+    attemptList = [];
+    gameState = 0;
+  };
+
   if (attemptList.length > 0) {
     if (attemptList[0].name == answer.name) {
       gameState = 2;
     } else if (guesses == 5) {
       gameState = 1;
     }
-
-    if (gameState == 1) {
-      if (confirm("Game over!\n Restart?")) {
-        setGuesses(0);
-        setInitialization(0);
-        attemptList = [];
-      } else {
-        gameState = 3;
-      }
-    } else if (gameState == 2) {
-      if (confirm("You won!\n Restart?")) {
-        setGuesses(0);
-        setInitialization(0);
-        attemptList = [];
-      } else {
-        gameState = 3;
-      }
-    }
   }
 
   return (
     <>
       <img className="logo" src="Lobdle Logo.webp" alt="Lobdle"></img>
+      <EndScreen restart={restart} />
       <ComboBox handleGuess={handleGuess} />
       <ul className="ulStyle attemptLabels">
         <li className="cell attemptLabelElement">
@@ -86,5 +73,5 @@ function App() {
   );
 }
 
-export { answer, gameState, resetGameState };
+export { answer, gameState };
 export default App;
