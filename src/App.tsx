@@ -59,6 +59,7 @@ function App() {
 
   return (
     <>
+      <img className="logo" src="Lobdle Logo.webp" alt="Lobdle"></img>
       <ComboBox handleGuess={handleGuess} />
       <ul className="ulStyle attemptLabels">
         <li className="cell attemptLabelElement">
