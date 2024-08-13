@@ -6,6 +6,7 @@ import { gameState } from "../App";
 
 export default function ComboBox({ handleGuess = (_: number) => { } }) {
   const [inputValue, setInputValue] = React.useState("");
+  const [value, setValue] = React.useState("");
   const [abnos, setAbnos] = React.useState(abnoNameList);
   const [disabled, setDisabled] = React.useState(false);
 
@@ -17,10 +18,12 @@ export default function ComboBox({ handleGuess = (_: number) => { } }) {
       case 2:
         setDisabled(true);
         setAbnos(abnoNameList);
+        setValue("");
     }
   }, [gameState]);
 
-  function handleChange(value: string | null) {
+  function handleChange(value: string) {
+    setValue(value);
     if (value && abnoNameList.includes(value)) {
       setAbnos(prevAbnos => prevAbnos.filter(abno => abno !== value));
       handleGuess(abnoNameList.indexOf(value));
@@ -39,14 +42,16 @@ export default function ComboBox({ handleGuess = (_: number) => { } }) {
       id="search-box"
       options={abnos}
       blurOnSelect
+      clearOnEscape
       freeSolo
       autoHighlight
       disablePortal
       disableClearable
       size="small"
       disabled={disabled}
+      value={value}
       onChange={(_event, value, _reason) => {
-        handleChange(value);
+        handleChange(value as string);
       }}
       inputValue={inputValue}
       onInputChange={(_event, newInputValue, reason) => {
