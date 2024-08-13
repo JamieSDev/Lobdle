@@ -14,13 +14,12 @@
     height: 100px;
     margin-right: 8px;
     margin-left: 8px;
-    background-color: #ffffa2;
+    background-color: #2c2c24;
     outline: outset #5c5c51;
 }
 
 .cellName {
     width: 130px;
-    height: 100px;
 }
 
 .correct {
@@ -31,6 +30,52 @@
 .incorrect {
     background-color: #ff3839;
     outline-color: #9e2323;
+}
+
+
+/* EndScreen */
+.endScreen {
+    width: 406px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.endText {
+    color: #ffffa2;
+    background-color: #ff3839;
+    font-family: "Norwester";
+    font-size: 50px;
+    height: 63px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.endImage {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    border: outset #5c5c51;
+}
+
+.button {
+    background-color: #2dbca6;
+    font-family: "Norwester";
+    border: outset #2dbca6;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 60px;
+    width: 185px;
+    margin: auto;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.button:hover {
+    background-color: #ffffa2;
+    border-color: #ffffa2;
 }
 
 
@@ -49,7 +94,6 @@ input[type=text] {
 
 .labelText {
     color: #ffffa2;
-    font-family: "Norwester";
 }
 
 
@@ -82,7 +126,6 @@ input[type=text] {
 .attemptLabelElement {
     border-radius: 5px;
     height: 60px;
-    background-color: #2c2c24;
 }
 
 
