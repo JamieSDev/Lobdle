@@ -182,7 +182,7 @@ input[type=text] {
     background-color: transparent !important;
 }
 
-.css-hwkq3c-MuiInputBase-root-MuiFilledInput-root::before,
-.css-hwkq3c-MuiInputBase-root-MuiFilledInput-root::after {
+.MuiInputBase-root::before,
+.MuiInputBase-root::after {
     border-bottom: none !important;
 }
