@@ -1,4 +1,4 @@
-import { answer } from "../App"
+import { answer, gameState } from "../App"
 import Abno from "../Abno";
 
 // 0: Name
@@ -11,12 +11,21 @@ function Cell(abno: Abno, index: number) {
   let element = <></>;
 
   const cellType = () => {
+    if (gameState === 1 && abno.name == answer.name) {
+      if (index === 1) return "cell cellName"
+      return "cell"
+    }
     if (index === 1) return (abno.name === answer.name) ? "cellName correct" : "cellName incorrect";
     if (index === 2 && abno.riskLevel === answer.riskLevel) return "correct";
     if (index === 3 && abno.qliphothCounter === answer.qliphothCounter) return "correct";
     if (index === 4 && abno.maxEnkephalin === answer.maxEnkephalin) return "correct";
     if (index === 5 && abno.canBreach === answer.canBreach) return "correct";
     return "incorrect";
+  }
+
+  const textType = () => {
+    if (gameState === 1 && abno.name == answer.name) return "cellText labelText"
+    return "cellText"
   }
 
   const text = () => {
@@ -39,7 +48,7 @@ function Cell(abno: Abno, index: number) {
     case 5: // Breach cell
       element =
         <div className={"cell " + cellType()}>
-          <div className="cellText">{text()}</div>
+          <div className={textType()}>{text()}</div>
         </div>;
       break;
   }

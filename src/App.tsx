@@ -3,6 +3,7 @@ import { useState } from "react";
 import Abno from "./Abno";
 import Cell from "./components/Cell";
 import EndScreen from "./components/EndScreen";
+import { abnoNameList } from "./AbnoData";
 
 let answer: Abno;
 let attemptList: Abno[] = [];
@@ -40,6 +41,7 @@ function App() {
       gameState = 2;
     } else if (guesses == 5) {
       gameState = 1;
+      addAttempt(abnoNameList.indexOf(answer.name));
     }
   }
 
