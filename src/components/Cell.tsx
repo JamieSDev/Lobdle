@@ -38,7 +38,7 @@ function Cell(abno: Abno, index: number) {
     return "Error";
   }
 
-  const contentType = (i: number) => {
+  const contentType = () => {
     if (index === 3) {
       if (answer.qliphothCounter > abno.qliphothCounter) {
         content = <div className="arrow upArrow">
@@ -77,7 +77,7 @@ function Cell(abno: Abno, index: number) {
     case 3: // Qlipoth cell
     case 4: // Max Enkephalin cell
     case 5: // Breach cell
-      contentType(index);
+      contentType();
       element = <div className={"cell " + cellType()}>{content}</div>;
       break;
   }
