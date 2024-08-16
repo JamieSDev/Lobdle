@@ -32,6 +32,24 @@
     outline-color: #9e2323;
 }
 
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(138, 31, 31);
+    /* background: #681616; */
+    height: 70%;
+    width: 70%;
+}
+
+.downArrow {
+    clip-path: polygon(90% 48%, 70% 50%, 70% 0, 30% 0, 30% 50%, 10% 48%, 50% 100%);
+}
+
+.upArrow {
+    clip-path: polygon(90% 52%, 70% 50%, 70% 100%, 30% 100%, 30% 50%, 10% 52%, 50% 0);
+}
+
 
 /* EndScreen */
 .endScreen {

@@ -9,6 +9,7 @@ import Abno from "../Abno";
 // 5: Image path to abnormality portrait
 function Cell(abno: Abno, index: number) {
   let element = <></>;
+  let content = <></>;
 
   const cellType = () => {
     if (gameState === 1 && abno.name == answer.name) {
@@ -37,6 +38,36 @@ function Cell(abno: Abno, index: number) {
     return "Error";
   }
 
+  const contentType = (i: number) => {
+    if (index === 3) {
+      if (answer.qliphothCounter > abno.qliphothCounter) {
+        content = <div className="arrow upArrow">
+          <div className={textType()}>{text()}</div>
+        </div>
+        return
+      } else if (answer.qliphothCounter < abno.qliphothCounter) {
+        content = <div className="arrow downArrow">
+          <div className={textType()}>{text()}</div>
+        </div>
+        return
+      }
+    }
+    if (index === 4) {
+      if (answer.maxEnkephalin > abno.maxEnkephalin) {
+        content = <div className="arrow upArrow">
+          <div className={textType()}>{text()}</div>
+        </div>
+        return
+      } else if (answer.maxEnkephalin < abno.maxEnkephalin) {
+        content = <div className="arrow downArrow">
+          <div className={textType()}>{text()}</div>
+        </div>
+        return
+      }
+    }
+    content = <div className={textType()}>{text()}</div>
+  }
+
   switch (index) {
     case 0: // Image cell
       element = <img className="cell" src={abno.image} alt={abno.name} />;
@@ -46,10 +77,8 @@ function Cell(abno: Abno, index: number) {
     case 3: // Qlipoth cell
     case 4: // Max Enkephalin cell
     case 5: // Breach cell
-      element =
-        <div className={"cell " + cellType()}>
-          <div className={textType()}>{text()}</div>
-        </div>;
+      contentType(index);
+      element = <div className={"cell " + cellType()}>{content}</div>;
       break;
   }
   return (
